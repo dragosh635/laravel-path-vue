@@ -1,8 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT%3A400%2C400italic%2C700%7CMontserrat%3A400%2C700&#038;
 
-ver=1.0.0);@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT%3A400%2C400italic%2C700%7CMontserrat%3A400%2C700&#038;ver=1.0.0);body {
+// Fonts
+@import url('http://fonts.googleapis.com/css?family=Old+Standard+TT%3A400%2C400italic%2C700%7CMontserrat%3A400%2C700&#038;ver=1.0.0');
+
+// Variables
+@import 'variables';
+
+body {    
   color: #999;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -29,7 +34,7 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   color: #999;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
@@ -39,7 +44,7 @@ a:hover {
 
 .top-bar a {
   color: #218944;
-  font-family: "Old Standard TT", serif;
+  font-family: 'Old Standard TT', serif;
   font-size: 16px;
   font-style: italic;
   letter-spacing: 0;
@@ -57,26 +62,26 @@ nav {
   border-top: 1px solid #ddd;
 }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 12px 0;
-  padding: 0;
+nav  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 12px 0;
+    padding: 0;    
 }
 
 nav li {
-  display: inline;
-  font-family: "Old Standard TT", serif;
-  font-size: 14px;
+    display: inline;
+    font-family: 'Old Standard TT', serif;               
+    font-size: 14px;
 }
 
 nav li.separator::before {
-  content: "|";
+    content: '|'
 }
 
 nav a {
-  color: #999;
+    color: #999;
 }
 
 .page-content {
@@ -89,20 +94,20 @@ img.home {
 }
 
 h4.intro {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   margin: 0 0 24px 0;
   text-align: center;
   text-transform: uppercase;
-  color: #545454;
+  color: #545454;    
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.2;    
 }
 
-.menu-categories {
+.menu-categories{
   padding: 10px 0 0 0;
   margin: 40px 0 0 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd;    
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -118,11 +123,11 @@ h4.intro {
 }
 
 .menu-categories h2 a {
-  font-family: "Old Standard TT", serif;
+  font-family: 'Old Standard TT', serif;
   font-weight: 400;
   font-size: 24px;
   margin-top: 0;
-  color: #555;
+  color: #555;    
 }
 
 .menu-categories img {
@@ -137,9 +142,9 @@ h4.intro {
   background-color: #ddd;
 }
 
-.social {
-  border-top: solid 2px #ddd;
-  display: flex;
+.social {    
+  border-top: solid 2px #ddd; 
+  display: flex;    
   padding-bottom: 50px;
 }
 
@@ -156,21 +161,21 @@ h4.intro {
 
 .social h4 {
   margin-top: 0;
-  font-family: "Old Standard TT", serif;
+  font-family: 'Old Standard TT', serif;
   font-size: 16px;
-  font-style: italic;
+  font-style: italic;    
   font-weight: 400;
   color: #545454;
 }
 
 .social p {
   padding-left: 10px;
-  font-family: "Old Standard TT", serif;
+  font-family: 'Old Standard TT', serif;
   font-size: 14px;
   line-height: normal;
 }
 
-.social .networks {
+.social .networks {    
   padding-left: 30px;
 }
 
@@ -183,9 +188,9 @@ footer {
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  margin: 0 0 24px 0;
+  margin: 0 0 24px 0;  
   text-transform: uppercase;
   color: #545454;
   font-weight: 400;
@@ -194,17 +199,17 @@ h1 {
 
 input {
   border-radius: 3px;
-  height: 25px;
+  height: 25px;  
   margin: 0 10px 5px 0;
   padding: 5px;
 }
 
-input[type=file] {
+input[type="file"] {  
   vertical-align: middle;
 }
 
-input[type=number] {
-  width: 40px;
+input[type="number"] {
+  width: 40px;  
 }
 
 a.add {
@@ -225,44 +230,42 @@ a.remove {
 
 @media only screen and (max-width: 770px) {
   nav ul {
-    flex-direction: column;
-  }
+      flex-direction: column;
+  }    
 
   nav li {
-    background-color: #f5f5f5;
-    display: block;
-    position: relative;
-    text-align: center;
+      background-color: #f5f5f5;
+      display: block;
+      position: relative;
+      text-align: center;
   }
 
   nav li.separator {
-    display: none;
+      display: none;
   }
 
   .top-bar {
-    padding: 15px 20px;
+      padding: 15px 20px;
   }
 
   .page-content {
-    margin: 0 20px;
+      margin: 0 20px;
   }
 
-  .menu-categories h2 a {
-    font-size: 14px;
+  .menu-categories h2 a {        
+      font-size: 14px;                
   }
 
   .menu-categories article {
-    padding: 10px 15px;
+      padding: 10px 15px;        
   }
 }
 
 @media only screen and (max-width: 520px) {
-  .menu-categories h2 {
-    display: none;
+  .menu-categories h2 {        
+      display: none;
   }
-
   .menu-categories img {
-    padding: 3px;
+      padding: 3px;     
   }
 }
-

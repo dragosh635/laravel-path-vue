@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require( 'laravel-mix' );
 
 /*
  |--------------------------------------------------------------------------
@@ -11,5 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.js( 'resources/js/app.js', 'public/js' )
+   .sass( 'resources/sass/app.scss', 'public/css' );
+
+if ( mix.inProduction() ) {
+    mix.version(); //add version number to each generated file
+}
+
+/* Browser reload after each change :) */
+mix.browserSync( '127.0.0.1:8000' );

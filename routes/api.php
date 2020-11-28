@@ -14,6 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post( '/categories/upsert', [ \App\Http\Controllers\CategoryController::class, 'upsert' ] );
+Route::delete( '/categories/{category}', [ \App\Http\Controllers\CategoryController::class, 'destroy' ] );
+Route::get( '/categories/{category}/items', [ \App\Http\Controllers\CategoryController::class, 'items' ] );
+
+Route::post( '/menu-items/add', [ \App\Http\Controllers\MenuItemController::class, 'store' ] );
+Route::get( '/menu-items/{menuItem}', function ( \App\Models\MenuItem $menuItem ) {
+    return $menuItem;
+} );
+
+Route::post( '/menu-items/{menuItem}', [ \App\Http\Controllers\MenuItemController::class, 'update' ] );
+
+Route::post( '/add-image', function ( Request $request ) {
+    $file = $request->file( 'file' );
+    $dir  = 'public/images';
+    $path = $file->store( $dir );
+
+    return str_replace( "$dir/", '', $path );
+} );
+
+
